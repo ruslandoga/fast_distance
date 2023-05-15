@@ -6,6 +6,7 @@ defmodule FastDistance.MixProject do
       app: :fast_distance,
       version: "0.1.0",
       elixir: "~> 1.14",
+      compilers: [:elixir_make | Mix.compilers()],
       start_permanent: Mix.env() == :prod,
       deps: deps()
     ]
@@ -22,7 +23,9 @@ defmodule FastDistance.MixProject do
   defp deps do
     [
       {:exqlite, "~> 0.13.11"},
-      {:benchee, "~> 1.1", only: :bench}
+      {:elixir_make, "~> 0.7.6"},
+      {:benchee, "~> 1.1", only: :bench},
+      {:postgrex, "~> 0.17.1", only: [:test, :bench]}
     ]
   end
 end
