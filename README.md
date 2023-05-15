@@ -12,6 +12,8 @@ SELECT ST_Distance(
 
 example from [postgis docs.](https://postgis.net/docs/manual-2.5/ST_Distance.html)
 
+---
+
 ```console
 $ MIX_ENV=bench mix run bench/distance.exs
 
