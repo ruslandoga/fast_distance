@@ -27,7 +27,7 @@ defmodule FastDistanceTest do
                  37.417312
                ])
 
-      #
+      # approx distance in km
       assert {:ok, [[27.715920610330436]]} =
                query(conn, "select fast_distance(?, ?, ?, ?)", [
                  _kremlin = 55.754517,
